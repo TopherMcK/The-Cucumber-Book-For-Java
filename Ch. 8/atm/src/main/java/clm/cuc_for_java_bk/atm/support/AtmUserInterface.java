@@ -31,8 +31,8 @@ public class AtmUserInterface implements Teller
 			String uri = "http://192.168.56.1:9988";
 			LOG.debug("^^ withdrawFrom() : uri = \n" + uri);
 			webDriver.get(uri);
-			webDriver.findElement(By.id("Amount"))
-			.sendKeys(String.valueOf(dollars));
+			webDriver.findElement(By.id(Integer.toString(dollars)))
+			.click();
 			webDriver.findElement(By.id("Withdraw"))
 			.click();
 	}

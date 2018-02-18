@@ -17,7 +17,7 @@ public class KnowsTheDomain
 	private Account myAccount;
 	private CashSlot cashSlot;
 	private Teller teller;
-	private EventFiringWebDriver webDriver;
+	private WebDriver webDriver;
 	
 	public Account getMyAccount()
 	{
@@ -49,13 +49,11 @@ public class KnowsTheDomain
 		return teller;
 	}
 	
-	public EventFiringWebDriver getWebDriver()
+	public WebDriver getWebDriver()
 	{
 		if(webDriver == null)
 		{
-			LOG.debug("++ KnowsTheDomain : Created new WebDriver");
-			System.setProperty("webdriver.gecko.driver", "webdrivers\\geckodriver.exe");
-			webDriver = new EventFiringWebDriver(new FirefoxDriver());
+			webDriver = getTeller().getWebDriver();
 		}
 		
 		return webDriver;

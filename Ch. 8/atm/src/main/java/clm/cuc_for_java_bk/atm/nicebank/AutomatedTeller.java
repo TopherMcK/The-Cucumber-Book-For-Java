@@ -1,5 +1,7 @@
 package clm.cuc_for_java_bk.atm.nicebank;
 
+import org.openqa.selenium.WebDriver;
+
 public class AutomatedTeller implements Teller
 {
 	public AutomatedTeller(CashSlot cashSlot)
@@ -13,6 +15,12 @@ public class AutomatedTeller implements Teller
 	{
 		account.credit(dollars);
 		cashSlot.dispense(dollars);
+	}
+
+	public WebDriver getWebDriver()
+	{
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
