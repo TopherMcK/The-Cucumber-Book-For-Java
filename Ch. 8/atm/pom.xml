@@ -14,6 +14,7 @@
 		<gherkin.version>2.12.2</gherkin.version>
 		<jetty.version>9.4.8.v20171121</jetty.version>
 		<junit.version>4.12</junit.version>
+		<log4j2.version>2.10.0</log4j2.version>
 		<picocontainer.version>3</picocontainer.version>
 		<selenium.version>3.9.1</selenium.version>
 		<springboot.version>1.5.2.RELEASE</springboot.version>
@@ -84,6 +85,15 @@
 			<artifactId>jetty-webapp</artifactId>
 			<version>${jetty.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
 	</dependencies>
 </project>

@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 		,dryRun = false
 		,monochrome = true
 		,snippets = SnippetType.CAMELCASE
-		,plugin = "pretty"
+		,plugin = {"pretty", "html:out"}
 		)
 public class CashWithdrawalTestRunner
 {}
